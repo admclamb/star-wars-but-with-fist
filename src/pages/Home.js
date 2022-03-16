@@ -8,6 +8,8 @@ const Home = () => {
   const [fighter1, setFighter1] = useState({});
   const [fighter2, setFighter2] = useState({});
   const [fighterReset, setFighterReset] = useState(false);
+
+  // Get fighters
   useEffect(() => {
     setFighters({});
     const abortController = new AbortController();
@@ -20,6 +22,7 @@ const Home = () => {
     return () => abortController.abort();
   }, []);
 
+  // Reset fight if used in fightScreen button
   const restartFight = () => {
     setFighter1({});
     setFighter2({});
