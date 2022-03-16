@@ -1,13 +1,90 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --color-main: #e89e10;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+}
+
+/* Resets */
+h1 {
+  font-size: 3.052rem;
+}
+
+h2 {
+  font-size: 2.441rem;
+}
+
+h3 {
+  font-size: 1.953rem;
+}
+
+h4 {
+  font-size: 1.563rem;
+}
+
+p,
+a {
+  font-size: 1.25rem;
+  margin-bottom: 0;
+}
+
+.text-sm {
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  -webkit-filter: brightness(70%);
+}
+
+a:hover {
+  color: inherit;
+}
+
+.navbar-logo {
+  font-size: 1.563rem;
+}
+
+.text-container-75 {
+  width: 75%;
+}
+
+.text-container-65 {
+  width: 65%;
+}
+
+.tab {
+  tab-size: 2;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* COlors */
+
+.color-main {
+  color: var(--color-main);
+}
+
+.bg-darker {
+  background-color: #222;
+}
+
+.bg-darkest {
+  background-color: #111;
 }
