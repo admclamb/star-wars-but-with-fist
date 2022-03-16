@@ -1,3 +1,5 @@
+import "./FighterCard.css";
+
 const FighterCard = ({
   fighter = {},
   setCurrentFighter,
@@ -17,7 +19,9 @@ const FighterCard = ({
   };
   return (
     <div className="fighter-card p-2">
-      <p onClick={pickFighter}>{name}</p>
+      <p onClick={pickFighter} className="fighter-select">
+        {name}
+      </p>
     </div>
   );
 };
