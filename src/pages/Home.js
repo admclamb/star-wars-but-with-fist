@@ -10,7 +10,7 @@ const Home = () => {
   const [fighter2, setFighter2] = useState({});
   const [fighter2Errors, setFighter2Errors] = useState("");
   const [fighterReset, setFighterReset] = useState(false);
-
+  console.log(fighter1);
   // Get fighters
   useEffect(() => {
     setFighters({});
@@ -32,7 +32,6 @@ const Home = () => {
     setFighter2Errors("");
     setFighterReset(true);
   };
-  console.log(fighters);
   return (
     <div className="bg-darker home">
       <header>
@@ -81,13 +80,11 @@ const Home = () => {
           </div>
         </div>
 
-        {fighter1 && fighter2 && (
-          <FighterScreen
-            fighter1={fighter1}
-            fighter2={fighter2}
-            restartFight={restartFight}
-          />
-        )}
+        <FighterScreen
+          fighter1={fighter1}
+          fighter2={fighter2}
+          restartFight={restartFight}
+        />
       </main>
     </div>
   );

@@ -20,7 +20,7 @@ const FighterScreen = ({ fighter1, fighter2, restartFight }) => {
         </section>
       </div>
       <div className="begin-fight-btn text-center mt-5">
-        {fighter1 && fighter2 && (
+        {Object.keys(fighter1).length > 0 && Object.keys(fighter2).length > 0 && (
           <button
             className="btn btn-outline-light btn-lg"
             onClick={() => setBeginFight(true)}
