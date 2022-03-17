@@ -4,7 +4,6 @@ import FighterCard from "./FighterCard";
 
 const FightersList = ({ fighters, fighter, setCurrentFighter }) => {
   const [fighterIsPicked, setFighterIsPicked] = useState(false);
-  const [errorMessage, setErrorMessage] = useState("");
 
   useEffect(() => {
     if (fighter.hasOwnProperty("name")) {

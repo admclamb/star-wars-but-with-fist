@@ -6,6 +6,7 @@ import "./Home.css";
 const Home = () => {
   const [fighters, setFighters] = useState([]);
   const [fighter1, setFighter1] = useState({});
+
   const [fighter2, setFighter2] = useState({});
   const [fighterReset, setFighterReset] = useState(false);
 
