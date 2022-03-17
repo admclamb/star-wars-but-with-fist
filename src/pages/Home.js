@@ -9,7 +9,6 @@ const Home = () => {
   const [fighter1Errors, setFighter1Errors] = useState("");
   const [fighter2, setFighter2] = useState({});
   const [fighter2Errors, setFighter2Errors] = useState("");
-  const [fighterReset, setFighterReset] = useState(false);
   console.log(fighter1);
   // Get fighters
   useEffect(() => {
