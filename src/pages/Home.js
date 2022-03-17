@@ -6,8 +6,9 @@ import "./Home.css";
 const Home = () => {
   const [fighters, setFighters] = useState([]);
   const [fighter1, setFighter1] = useState({});
-
+  const [fighter1Errors, setFighter1Errors] = useState("");
   const [fighter2, setFighter2] = useState({});
+  const [fighter2Errors, setFighter2Errors] = useState("");
   const [fighterReset, setFighterReset] = useState(false);
 
   // Get fighters
@@ -16,7 +17,7 @@ const Home = () => {
     const abortController = new AbortController();
 
     async function getFighterData() {
-      const fighterData = await getFighters(abortController);
+      const fighterData = await getFighters();
       setFighters(fighterData.results);
     }
     getFighterData();
@@ -26,9 +27,12 @@ const Home = () => {
   // Reset fight if used in fightScreen button
   const restartFight = () => {
     setFighter1({});
+    setFighter1Errors("");
     setFighter2({});
+    setFighter2Errors("");
     setFighterReset(true);
   };
+  console.log(fighters);
   return (
     <div className="bg-darker home">
       <header>
@@ -58,6 +62,8 @@ const Home = () => {
                 fighters={fighters}
                 fighter={fighter1}
                 setCurrentFighter={setFighter1}
+                fighterErrors={fighter1Errors}
+                setFighterErrors={setFighter1Errors}
               />
             )}
           </div>
@@ -68,6 +74,8 @@ const Home = () => {
                 fighter={fighter2}
                 fighters={fighters}
                 setCurrentFighter={setFighter2}
+                fighterErrors={fighter2Errors}
+                setFighterErrors={setFighter2Errors}
               />
             )}
           </div>

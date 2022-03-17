@@ -2,7 +2,13 @@ import { useEffect, useState } from "react";
 import FighterErrorMessage from "../errors/FighterErrorMessage";
 import FighterCard from "./FighterCard";
 
-const FightersList = ({ fighters, fighter, setCurrentFighter }) => {
+const FightersList = ({
+  fighters,
+  fighter,
+  setCurrentFighter,
+  fighterErrors,
+  setFighterErrors,
+}) => {
   const [fighterIsPicked, setFighterIsPicked] = useState(false);
 
   useEffect(() => {
@@ -22,13 +28,13 @@ const FightersList = ({ fighters, fighter, setCurrentFighter }) => {
           setCurrentFighter={setCurrentFighter}
           fighterIsPicked={fighterIsPicked}
           setFighterIsPicked={setFighterIsPicked}
-          setErrorMessage={setErrorMessage}
+          setErrorMessage={setFighterErrors}
         />
       );
     });
     return (
       <div className="fighter-list d-flex flex-column">
-        {errorMessage && <FighterErrorMessage errorMessage={errorMessage} />}
+        {fighterErrors && <FighterErrorMessage errorMessage={fighterErrors} />}
         <div className="d-flex justify-content-between flex-wrap">
           {fightersArr}
         </div>
