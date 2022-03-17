@@ -54,9 +54,9 @@ const Home = () => {
         </div>
       </header>
       <main className="text-light mt-5">
-        <div className="container mb-5">
+        <div className="container pb-5">
           <div className="fighter-1">
-            <h4 className="mb-5">Choose Your first fighter</h4>
+            <h4 className="mb-5 color-main">Choose Your first fighter</h4>
             {fighters && (
               <FightersList
                 fighters={fighters}
@@ -68,7 +68,7 @@ const Home = () => {
             )}
           </div>
           <div className="fighter-2 mt-5">
-            <h4 className="mb-5">Choose Your Second fighter</h4>
+            <h4 className="mb-5 color-main">Choose Your Second fighter</h4>
             {fighters && (
               <FightersList
                 fighter={fighter2}

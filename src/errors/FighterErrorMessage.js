@@ -1,6 +1,6 @@
 const FighterErrorMessage = ({ errorMessage }) => {
   return (
-    <div className="bg-danger p-3 d-flex  align-items-center">
+    <div className="alert alert-warning">
       <p>{errorMessage}</p>
     </div>
   );
