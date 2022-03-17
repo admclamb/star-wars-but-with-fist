@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { decideWinner } from "../utils/decideWinner";
 const FightOutcome = ({ fighter1, fighter2, beginFight }) => {
   return (
