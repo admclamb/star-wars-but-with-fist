@@ -9,7 +9,6 @@ const Home = () => {
   const [fighter1Errors, setFighter1Errors] = useState("");
   const [fighter2, setFighter2] = useState({});
   const [fighter2Errors, setFighter2Errors] = useState("");
-  console.log(fighter1);
   // Get fighters
   useEffect(() => {
     setFighters({});
@@ -29,7 +28,6 @@ const Home = () => {
     setFighter1Errors("");
     setFighter2({});
     setFighter2Errors("");
-    setFighterReset(true);
   };
   return (
     <div className="bg-darker home">
